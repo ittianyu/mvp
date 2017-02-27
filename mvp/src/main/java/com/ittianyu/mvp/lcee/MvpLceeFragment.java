@@ -73,6 +73,14 @@ public abstract class MvpLceeFragment<CV extends View, M, V extends MvpLceeView<
                 onErrorViewClicked();
             }
         });
+        if (null != emptyView) {
+            emptyView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onErrorViewClicked();
+                }
+            });
+        }
     }
 
     private void getLceeView(View view) {
